@@ -1,5 +1,7 @@
 import darkThemeButton from "/javascripts/dark_theme.js";
 
+
+
 const doc = document; // Abreviación de document
 
 doc.addEventListener("DOMContentLoaded", (e) => {
@@ -40,3 +42,18 @@ function scaleCV() {
 function removeScale() {
   doc.body.classList.remove("scale-cv");
 }
+
+const FormularioAbrirbtn=
+document.querySelector("#formulario-abrir-btn");
+const FormularioCerrarbtn=
+document.querySelector("#formulario-cerrar-btn");
+const modal=
+document.querySelector("#modal");
+
+FormularioAbrirbtn.addEventListener("click", ()=>{
+  modal.showModal();
+})
+
+FormularioCerrarbtn.addEventListener("click", ()=>{
+  modal.close();
+})

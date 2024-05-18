@@ -37,6 +37,7 @@
                     <i class="dark-theme-i fa-solid fa-moon"></i>
                 </button>
 
+
                 <div class="photo__container">
                     <img src="/images/kerli.jpg"
                         class="photo__img"
@@ -94,8 +95,31 @@
                     >
                         <i class="fa-brands fa-github"></i>
                         <span>Github: kerli15</span>
+                       
                     </a>
                 </div>
+
+                <div>
+                     <button id= "formulario-abrir-btn" class="formulario-abrir-btn">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <span>Formulario de contacto</span>
+                </div>
+
+                <dialog id="modal">
+                    <form action="/form-contacto" method="post">
+                        <font color="purple"><h2>Llenar Formulario</h2></font>
+                        <button id="formulario-cerrar-btn" class="formulario-cerrar-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <input class="Nombre" type="text" name="name" placeholder="Ingrese su nombre y apellido">
+                        <input class="Nombre" type="email" name="email" placeholder="Ingrese su correo">
+                        <input class="Nombre" type="text" name="mensaje" placeholder="Ingrese un comentario">
+                        <input class="boton" type="submit">
+                    </form>
+                </dialog>
+    
+
             </div>
 
             <!-- Main content -->

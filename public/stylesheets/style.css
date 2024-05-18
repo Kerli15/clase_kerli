@@ -139,13 +139,104 @@ body.scale-cv {
 
 .dark-theme-btn:hover {
   background: var(--subtitle-color);
-  color: var(--white);
+  color: #f2f2f2;
 }
 
 .dark-theme-btn > i {
   color: inherit;
   font-size: var(--h4-font-size);
   pointer-events: none;
+}
+
+.formulario-abrir-btn {
+  position:-ms-page;
+  z-index: 999;
+  width: 3rem;
+  height: 3rem;
+  right: 1vw;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--sidebar-color);
+  color: var(--subtitle-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.formulario-abrir-btn:hover {
+  background: var(--subtitle-color);
+  color: #f2f2f2;
+
+}
+
+/*ventana*/
+
+.formulario-cerrar-btn {
+  position:absolute;
+  z-index: 99;
+  width: 2rem;
+  height: 2rem;
+  right: 1vw;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--sidebar-color);
+  color: var(--subtitle-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.formulario-cerrar-btn:hover {
+  background: var(--subtitle-color);
+  color: #f2f2f2;
+  
+}
+
+#modal::backdrop{
+  background-color: rgba(0,0,0,.55);
+}
+
+#modal {
+  border: 1;
+  border-color: #fa97e9;
+  border-radius: 5%;
+  width: 60%;
+  height: 50%;
+  margin: auto;
+  text-align: center;
+  font-family: "Homer Simpson UI";
+  font: style rgb(199, 58, 175);;
+}
+
+.Nombre {
+  border: 1;
+  border-color: #8c1297;
+  margin: auto;
+  margin-bottom: 2%;
+  text-align: center;
+  position: center;
+  display: flex;
+  flex-direction: column;
+  height: 17%;
+  width: 60%;
+}
+
+form {
+  margin: auto;
+  height: 100%;
+  gap: 5px;
+}
+
+.boton {
+  background-color: #f062d8;
+  width: 40%;
+  height: 15%;
 }
 
 /* General styles */
