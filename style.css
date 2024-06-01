@@ -1,0 +1,573 @@
+/* CSS variables */
+:root {
+  /* Colors */
+
+  --title-color: #8c1297;
+  --subtitle-color: #b757e4;
+  --text-color: #5e5e5e;
+  --text-color-light: #939393;
+  --sidebar-color: hsl(295, 88%, 83%);
+  --sidebar-color-responsive: #fafafa;
+  --content-color: #fafafa;
+  --body-color: #fafafa;
+  --time-color: #f062d8;
+  --contact-link-color: #e936d1;
+  --contact-link-color-hover: #fafafa;
+  --blue: hsl(295, 95%, 76%);
+  --indigo: #6610f2;
+  --white: #b757e4;
+
+  /* Font and typography */
+
+  --body-font: "Noto Sans KR", sans-serif;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.8rem;
+  --h3-font-size: 1.45rem;
+  --h4-font-size: 1.2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.8rem;
+  --rounder-size: 1rem;
+  --line-translation: 7px;
+
+  /* Font weight */
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* Margin */
+
+  --m-1: 0.5rem;
+  --m-2: 1rem;
+  --m-3: 1.5rem;
+  --m-4: 2rem;
+  --m-5: 3rem;
+}
+
+/* Scale CV */
+
+body.scale-cv {
+  --h1-font-size: 0.938rem;
+  --h2-font-size: 0.938rem;
+  --h3-font-size: 0.875rem;
+  --h4-font-size: 0.8rem;
+  --normal-font-size: 0.813rem;
+  --small-font-size: 0.75rem;
+  --small-font-size: 0.688rem;
+  --smaller-font-size: 0.688rem;
+  --rounder-size: 0.7rem;
+  --m-1: 0.25rem;
+  --m-2: 0.5rem;
+  --m-3: 0.75rem;
+  --m-4: 1rem;
+  --m-5: 2rem;
+  --line-translation: 5px;
+}
+
+.scale-cv .curriculum {
+  margin: 0 auto;
+  max-width: 99%;
+}
+
+.scale-cv .curriculum__content {
+  width: 65%;
+}
+
+.scale-cv .curriculum__sidebar {
+  width: 35%;
+}
+
+
+/* Scroll Top Button */
+
+.scroll-top-btn {
+  position: fixed;
+  z-index: 0;
+  bottom: calc(1vh + 7rem);
+  width: 3rem;
+  height: 3rem;
+  right: 1vw;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--sidebar-color);
+  color: var(--subtitle-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.scroll-top-btn:hover {
+  background: var(--subtitle-color);
+  color: var(--white);
+}
+
+.scroll-top-btn > i {
+  color: inherit;
+  font-size: var(--h4-font-size);
+  pointer-events: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+
+/* Dark Theme Button */
+
+.dark-theme-btn {
+  position: fixed;
+  z-index: 0;
+  width: 3rem;
+  height: 3rem;
+  right: 1vw;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--sidebar-color);
+  color: var(--subtitle-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover {
+  background: var(--subtitle-color);
+  color: #f2f2f2;
+}
+
+.dark-theme-btn > i {
+  color: inherit;
+  font-size: var(--h4-font-size);
+  pointer-events: none;
+}
+
+.formulario-abrir-btn {
+  position:-ms-page;
+  z-index: 0;
+  width: 3rem;
+  height: 3rem;
+  right: 1vw;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--sidebar-color);
+  color: var(--subtitle-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.formulario-abrir-btn:hover {
+  background: var(--subtitle-color);
+  color: #f2f2f2;
+
+}
+
+/*ventana*/
+
+.formulario-cerrar-btn {
+  position:absolute;
+  z-index: 0;
+  width: 2rem;
+  height: 2rem;
+  right: 1vw;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--sidebar-color);
+  color: var(--subtitle-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+
+
+.formulario-cerrar-btn:hover {
+  background: var(--subtitle-color);
+  color: #f2f2f2;
+  
+}
+
+#modal::backdrop{
+  background-color: rgba(0,0,0,.55);
+  z-index: 9999;
+}
+
+#modal {
+  border: 1;
+  border-color: #fa97e9;
+  border-radius: 5%;
+  width: 60%;
+  height: 50%;
+  margin: auto;
+  text-align: center;
+  font-family: "Homer Simpson UI";
+  font: style rgb(199, 58, 175);;
+  z-index: 10000;
+}
+
+
+.g-recaptcha{
+  position: fixed;
+  z-index: 9000;
+}
+
+.Nombre {
+  border: 1;
+  border-color: #8c1297;
+  margin: auto;
+  margin-bottom: 2%;
+  text-align: center;
+  position: center;
+  display: flex;
+  flex-direction: column;
+  height: 17%;
+  width: 60%;
+}
+
+form {
+  margin: auto;
+  height: 100%;
+  gap: 5px;
+}
+
+.boton {
+  background-color: #f062d8;
+  width: 40%;
+  height: 15%;
+}
+
+/* General styles */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  background: var(--body-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.subtitle {
+  font-size: var(--h3-font-size);
+  text-transform: uppercase;
+  color: var(--subtitle-color);
+}
+
+/* Main containers */
+
+.curriculum {
+  max-width: 80%;
+
+  margin: 50px auto;
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 1);
+  border-radius: 1rem;
+
+  display: flex;
+}
+
+.curriculum__content {
+  background: var(--content-color);
+  width: 70%;
+  border-radius: 0 1rem 1rem 0;
+  padding: var(--m-4) var(--m-5);
+}
+
+.curriculum__sidebar {
+  position: relative;
+  background: var(--sidebar-color);
+  width: 30%;
+  border-radius: 1rem 0 0 1rem;
+  padding: 0.5rem;
+}
+
+/* Sidebar styles */
+
+.curriculum__content hr {
+  height: 4px;
+  background-color: rgb(80, 89, 128);
+  border: 0px;
+  margin-bottom: var(--m-2);
+}
+
+.curriculum__sidebar hr {
+  height: 4px;
+  background-color: var(--white);
+  border: 0px;
+  margin-bottom: var(--m-2);
+}
+
+.photo__container {
+  margin: var(--m-2) auto;
+  width: 50%;
+}
+
+.photo__img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.curriculum__name > h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.aboutme,
+.contact {
+  margin: var(--m-5) 0.7rem;
+}
+
+.contact__link {
+  margin-bottom: var(--m-1);
+  border-radius: 1rem;
+  padding: 5px;
+  display: block;
+  transition: all 0.2s ease-out;
+}
+
+.contact__link span {
+  word-wrap: break-word;
+  font-size: var(--normal-font-size);
+}
+
+.contact__link > i {
+  color: var(--contact-link-color);
+  width: 20px;
+}
+
+.contact__link:hover {
+  color: var(--subtitle-color);
+  background-color: var(--contact-link-color-hover);
+}
+
+/* Content styles */
+
+.certificates,
+.idioms,
+.skills {
+  margin: var(--m-5) 0;
+}
+
+.content__subtitle {
+  width: fit-content;
+}
+
+.education__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.education__li {
+  display: flex;
+}
+
+.education__time {
+  padding-right: 1rem;
+}
+
+.education__rounder {
+  position: relative;
+  display: block;
+  width: var(--rounder-size);
+  height: var(--rounder-size);
+  background-color: var(--time-color);
+  border-radius: 50%;
+  margin-top: 0.25rem;
+  transform: translate(0, 4px);
+}
+
+.education__line {
+  display: block;
+  width: 2px;
+  height: 107%;
+  background-color: var(--time-color);
+  transform: translate(var(--line-translation), 0);
+}
+
+.education__title {
+  font-size: var(--h4-font-size);
+}
+
+.education__li {
+  margin-bottom: var(--m-2);
+}
+
+.education__item {
+  font-size: var(--normal-font-size);
+  color: var(--text-color-light);
+  display: block;
+  margin: var(--m-1);
+}
+
+.certificate__item {
+  margin-bottom: var(--m-2);
+}
+
+.certificate__title {
+  font-size: var(--h4-font-size);
+  margin-bottom: 0.7rem;
+}
+
+.idioms__data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: var(--m-2);
+}
+
+.skills__data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: var(--m-2);
+  gap: var(--m-1);
+}
+
+/* Dark theme styles */
+
+body.dark-theme {
+  --title-color: #f2f2f2;
+  --text-color: #bfbfbf;
+  --body-color: #2b2b2b;
+  --content-color: #212121;
+  --sidebar-color: #181616;
+  --sidebar-color-responsive: #181616;
+  --time-color: #bfbfbf;
+  --contact-link-color: #fafafa;
+  --contact-link-color-hover: #2b2b2b;
+}
+
+/* Responsive styles */
+
+/* < 1300px */
+
+@media (max-width: 1300px) {
+  .curriculum {
+    max-width: 90%;
+  }
+}
+
+/* < 1000px */
+
+@media (max-width: 1000px) {
+  .curriculum {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .education__line {
+    height: 103%;
+  }
+
+  .idioms__data,
+  .skills__data {
+    grid-template-columns: 1fr 1fr;
+    margin: 1.2rem;
+  }
+}
+
+/* < 700px */
+
+@media (max-width: 700px) {
+  .curriculum {
+    display: block;
+    margin: 0;
+  }
+
+
+  .curriculum__sidebar {
+    width: 100%;
+    background: var(--sidebar-color-responsive);
+    border-radius: 0%;
+  }
+
+  .curriculum__content {
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  .sidebar__subtitle {
+    width: fit-content;
+  }
+
+  .curriculum__content hr,
+  .curriculum__sidebar hr {
+    height: 4px;
+    width: 100%;
+    background-color: rgb(80, 89, 128);
+    border: 0px;
+    margin-bottom: 10px;
+  }
+
+  .skills__data {
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--m-2);
+  }
+
+  .idioms__data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skills__item {
+    width: 7rem;
+  }
+
+  .contact__link:hover {
+    color: var(--blue);
+    background-color: rgb(231, 231, 231);
+  }
+}
+
+/* < 500px */
+
+@media (max-width: 500px) {
+  .skills__data,
+  .idioms__data {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: var(--m-2);
+  }
+
+  .idioms__item {
+    width: 10rem;
+  }
+}
