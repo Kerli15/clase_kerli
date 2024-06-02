@@ -2,6 +2,15 @@
 
 <html lang="es">
     <head>
+        <!-- Google tag (gtag.js) -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ECRXB6YNMS"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ECRXB6YNMS');
+        </script>
         <!-- Meta tags -->
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -107,14 +116,15 @@
                 </div>
 
                 <dialog id="modal">
-                    <form action="/form-contacto" method="post">
+                    <form action="/form-contacto" method="post" id="formulario">
                         <font color="purple"><h2>Llenar Formulario</h2></font>
                         <button id="formulario-cerrar-btn" class="formulario-cerrar-btn">
                         <i class="fa-solid fa-xmark"></i>
                         </button>
-                        <input class="Nombre" type="text" name="name" placeholder="Ingrese su nombre y apellido">
-                        <input class="Nombre" type="email" name="email" placeholder="Ingrese su correo">
-                        <input class="Nombre" type="text" name="mensaje" placeholder="Ingrese un comentario">
+                        <input class="Nombre" type="text" name="name" placeholder="Ingrese su nombre y apellido" required>
+                        <input class="Nombre" type="email" name="email" placeholder="Ingrese su correo" required>
+                        <input class="Nombre" type="text" name="mensaje" placeholder="Ingrese un comentario" required>
+                        <div class="g-recaptcha" data-sitekey="6Lc9MO0pAAAAAOr3fxsUIfrE8esLy3DYUHIqCzPp"></div>
                         <input class="boton" type="submit">
                     </form>
                 </dialog>
@@ -235,5 +245,6 @@
 
         <!-- Custom JS -->
         <script type="module" src="/javascripts/main.js"></script>
+        <script src="/javascripts/javacaptcha.js"></script>
     </body>
 </html>

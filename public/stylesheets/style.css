@@ -82,7 +82,7 @@ body.scale-cv {
 
 .scroll-top-btn {
   position: fixed;
-  z-index: 999;
+  z-index: 0;
   bottom: calc(1vh + 7rem);
   width: 3rem;
   height: 3rem;
@@ -121,7 +121,7 @@ body.scale-cv {
 
 .dark-theme-btn {
   position: fixed;
-  z-index: 999;
+  z-index: 0;
   width: 3rem;
   height: 3rem;
   right: 1vw;
@@ -150,7 +150,7 @@ body.scale-cv {
 
 .formulario-abrir-btn {
   position:-ms-page;
-  z-index: 999;
+  z-index: 0;
   width: 3rem;
   height: 3rem;
   right: 1vw;
@@ -176,7 +176,7 @@ body.scale-cv {
 
 .formulario-cerrar-btn {
   position:absolute;
-  z-index: 99;
+  z-index: 0;
   width: 2rem;
   height: 2rem;
   right: 1vw;
@@ -192,6 +192,8 @@ body.scale-cv {
   transition: all 0.3s ease-out;
 }
 
+
+
 .formulario-cerrar-btn:hover {
   background: var(--subtitle-color);
   color: #f2f2f2;
@@ -200,6 +202,7 @@ body.scale-cv {
 
 #modal::backdrop{
   background-color: rgba(0,0,0,.55);
+  z-index: 9999;
 }
 
 #modal {
@@ -212,6 +215,13 @@ body.scale-cv {
   text-align: center;
   font-family: "Homer Simpson UI";
   font: style rgb(199, 58, 175);;
+  z-index: 10000;
+}
+
+
+.g-recaptcha{
+  position: fixed;
+  z-index: 9000;
 }
 
 .Nombre {
