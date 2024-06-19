@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <% if (error_msg) { %>
+    <p><%= error_msg %></p>
+  <% } %>
+  <form action="/auth/login" method="POST">
+    <h1 class="title">Login</h1>
+    <label for="username"><i class="fa-solid fa-circle-user"></i></label>
+    <input placeholder="Usuario" type="text" name="username" id="username" required>
+    
+    <label for="password"><i class="fa-solid fa-lock"></i></label>
+    <input placeholder="Contraseña" type="password" name="password" id="password" required>
+    
+    <button type="submit">Login</button>
+    
+   
+  </form>
+
+  <div>
+     <p>Iniciar sesion con:</p>
+    <a href="/auth/google"><button>Google</button></a>
+  </div>
+  
+
+</body>
+</html>

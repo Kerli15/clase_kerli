@@ -218,10 +218,28 @@ body.scale-cv {
   z-index: 10000;
 }
 
+.contacto{
+  position:-ms-page;
+  z-index: 0;
+  width: 3rem;
+  height: 3rem;
+  right: 1vw;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--sidebar-color);
+  color: var(--subtitle-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
 
-.g-recaptcha{
-  position: fixed;
-  z-index: 9000;
+.contacto:hover{
+  background: var(--subtitle-color);
+  color: #f2f2f2;
+  
 }
 
 .Nombre {

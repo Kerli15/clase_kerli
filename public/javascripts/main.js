@@ -57,3 +57,18 @@ FormularioAbrirbtn.addEventListener("click", ()=>{
 FormularioCerrarbtn.addEventListener("click", ()=>{
   modal.close();
 })
+
+const ContactoAbrirbtn=
+document.querySelector("#contacto-abrir-btn");
+const ContactoCerrarbtn=
+document.querySelector("#contacto-cerrar-btn");
+const ventana=
+document.querySelector("#ventana");
+
+ContactoAbrirbtn.addEventListener("click", ()=>{
+  ventana.showModal();
+})
+
+ContactoCerrarbtn.addEventListener("click", ()=>{
+  ventana.close();
+})
